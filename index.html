@@ -1,0 +1,144 @@
+<html>
+
+<head>
+	<link href="css/index.css" type="text/css" rel="stylesheet"/>
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+	
+	<script>
+		$("#slideshow1 > div:gt(0)").hide();
+		$("#slideshow2 > div:gt(0)").hide();
+		$("#slideshow3 > div:gt(0)").hide();
+
+		setInterval(function() { 
+		  $('#slideshow1 > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow1');
+		},  3000);
+		
+		setInterval(function() { 
+		  $('#slideshow2 > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow2');
+		},  3000);
+		
+		setInterval(function() { 
+		  $('#slideshow3 > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow3');
+		},  3000);
+		
+		
+		/*visibility functions*/
+		function settingSlider1Visibility() {
+			
+			document.getElementById("slideshow1").style.visibility = "visible";
+			document.getElementById("slideshow2").style.visibility = "hidden";
+			document.getElementById("slideshow3").style.visibility = "hidden";
+			document.getElementById("slideshow4").style.visibility = "hidden";
+		}
+		function settingSlider2Visibility() {
+			
+			document.getElementById("slideshow1").style.visibility = "hidden";
+			document.getElementById("slideshow2").style.visibility = "visible";
+			document.getElementById("slideshow3").style.visibility = "hidden";
+			document.getElementById("slideshow4").style.visibility = "hidden";
+		}
+		function settingSlider3Visibility() {
+			
+			document.getElementById("slideshow1").style.visibility = "hidden";
+			document.getElementById("slideshow2").style.visibility = "hidden";
+			document.getElementById("slideshow3").style.visibility = "visible";
+			document.getElementById("slideshow4").style.visibility = "hidden";
+		}
+		function settingSlider4Visibility() {
+			
+			document.getElementById("slideshow1").style.visibility = "hidden";
+			document.getElementById("slideshow2").style.visibility = "hidden";
+			document.getElementById("slideshow3").style.visibility = "hidden";
+			document.getElementById("slideshow4").style.visibility = "visible";
+		}
+	</script>
+</head>
+
+<body>
+
+
+	<div class="container">
+		<div id="selections">
+			<ul>
+				<li><a href="#" onclick="settingSlider1Visibility();">TOURISM</a></li>
+				<li><a href="#" onclick="settingSlider2Visibility();">FESTIVAL</a></li>
+				<li><a href="#" onclick="settingSlider3Visibility();">FOOD</a></li>
+				<li><a href="#" onclick="settingSlider4Visibility();">MUSIC</a></li>
+				<li><a href="#">BLOG</a></li>
+				<li><a href="#">SUGGESTIONS</a></li>
+			</ul>
+		</div><!--end of selections div-->
+		
+		<div class="sliders">
+		
+			<div id="slideshow1" class="slider">
+			   <div>
+				 <img src="images/01.jpg">
+			   </div>
+			   <div>
+				 <img src="images/02.jpg">
+			   </div>
+			   <div>
+				 <img src="images/03.jpg">
+			   </div>
+			</div><!--end of slideshow1-->
+			
+			<div id="slideshow2" class="slider">
+			   <div>
+				 <img src="images/11.jpg">
+			   </div>
+			   <div>
+				 <img src="images/12.jpg">
+			   </div>
+			   <div>
+				 <img src="images/13.jpg">
+			   </div>
+			</div><!--end of slideshow2-->
+			
+			<div id="slideshow3" class="slider">
+			   <div>
+				 <img src="images/21.jpg">
+			   </div>
+			   <div>
+				 <img src="images/22.jpg">
+			   </div>
+			   <div>
+				 <img src="images/23.jpg">
+			   </div>
+			</div><!--end of slideshow3-->
+			
+			<div id="slideshow4" class="slider">
+			   <div>
+				 <img src="images/31.jpg">
+			   </div>
+			   <div>
+				 <img src="images/32.jpg">
+			   </div>
+			   <div>
+				 <img src="images/33.jpg">
+			   </div>
+			</div><!--end of slideshow4-->
+			
+		</div><!--end of sliders div-->
+		
+		
+	</div><!--end of container div-->
+
+</body>
+	
+</html>
